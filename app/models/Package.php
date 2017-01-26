@@ -5,10 +5,10 @@
  *
  * @copyright 2017 Phil Thompson
  */
-class Widget extends Eloquent
+class Package extends Eloquent
 {
     /** @var string $table */
-    protected $table = "widgets";
+    protected $table = "packages";
 
     /** @var array $fillable */
     protected $fillable = ["size"];

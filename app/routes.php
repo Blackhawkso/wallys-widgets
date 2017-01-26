@@ -11,7 +11,10 @@
 |
 */
 
-Route::get('/', function()
-{
-	return View::make('hello');
-});
+Route::get("/", ["as" => "home", "uses" => "Home@indexAction"]);
+Route::post("/", ["as" => "result", "uses" => "Home@processAction"]);
+
+Route::get("/setup", ["as" => "setup.index", "uses" => "Setup@indexAction"]);
+Route::post("/setup/new", ["as" => "setup.new", "uses" => "Setup@newAction"]);
+Route::post("/setup/edit/{id}", ["as" => "setup.edit", "uses" => "Setup@editAction"]);
+Route::get("/setup/delete/{id}", ["as" => "setup.delete", "uses" => "Setup@deleteAction"]);
