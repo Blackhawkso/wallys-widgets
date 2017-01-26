@@ -75,11 +75,9 @@ class Home extends BaseController
                 while ($left < $options[$package_count]) {
                     $package_count--;
                     if ($package_count < 0) {
+                        $package_count = 0;
                         break;
                     }
-                }
-                if ($package_count < 0) {
-                    $package_count = 0;
                 }
                 $result[$options[$package_count]] += 1;
                 $left = $left - $options[$package_count];
